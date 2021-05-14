@@ -14,13 +14,22 @@ import isi.died.parcial01.ejercicio02.dominio.Inscripcion;
 public class BaseDeDatos {
 
 	public void guardar(Inscripcion i) throws BaseDeDatosExcepcion {
-		if(i == null) throw new BaseDeDatosExcepcion(i);
+		try{
+			if(i != null) {;}
+		}
+		catch(BaseDeDatosExcepcion b) {
+			b.printStackTrace();
+		}
 		// simula una llamada a una base de datos
 	}
 	
 	public void guardar(Examen i) throws BaseDeDatosExcepcion {
-		if(i == null) throw new BaseDeDatosExcepcion(i);
 		// simula una llamada a una base de datos
-
+		try{
+			if(i != null) {;}
+		}
+		catch(BaseDeDatosExcepcion b) {
+			b.printStackTrace();
+		}
 	}
 }
